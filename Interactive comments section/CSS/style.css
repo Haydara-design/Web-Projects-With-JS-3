@@ -1,0 +1,262 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik';
+  line-height: 1.5;
+  background-color: hsl(223, 19%, 93%);
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+/* left */
+.plus-minus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(238, 40%, 52%);
+  background-color: hsl(239, 57%, 85%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.plus-minus i {
+  cursor: pointer;
+  color: hsl(238, 40%, 52%, 0.4);
+  transition: 0.4s;
+}
+
+.plus-minus i:hover {
+  color: hsl(238, 40%, 52%);
+}
+
+/* right */
+.flex+p {
+  color: hsl(211, 10%, 45%);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.flex p:first-of-type {
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.flex p:first-of-type span {
+  color: hsl(211, 10%, 45%);
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.left .last,
+.flex .last {
+  color: hsl(238, 40%, 52%);
+  cursor: pointer;
+}
+
+.left .last,
+.flex .last {
+  margin: 0 0 0 auto;
+  transition: 0.4s;
+  line-height: 1;
+}
+
+.left .last:hover,
+.flex .last:hover {
+  color: hsl(238, 40%, 52%, 0.5);
+}
+
+.left .last:active,
+.flex .last:active {
+  transform: translateY(10px);
+}
+
+/* Reply Card */
+.reply-card {
+  align-items: flex-start;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+.c1 {
+  padding: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  margin-bottom: 0;
+}
+
+.image2 {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.image2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid hsl(223, 19%, 93%);
+  border-radius: 10px;
+  outline: 1px solid hsl(238, 40%, 52%);
+}
+
+.reply-card button {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  background-color: hsl(238, 40%, 52%);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.reply-card button:hover {
+  background-color: hsl(238, 40%, 52%, 0.5);
+}
+
+.reply-card button:active {
+  background-color: hsl(238, 40%, 52%);
+  transform: scale(0.8);
+}
+
+/* special */
+.card.special {
+  width: 95%;
+  max-width: 650px;
+  margin-left: 13.333333%;
+  position: relative;
+}
+
+.cont {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.cont::before {
+  content: '';
+  width: 1px;
+  height: calc(100% - 20px);
+  background-color: hsl(211, 10%, 45%, 0.2);
+  position: absolute;
+  left: 6.6666667%;
+  top: 0;
+}
+
+
+/* another */
+.red,
+.blue {
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+  display: inline-block;
+}
+
+.blue {
+  color: hsl(238, 40%, 52%);
+}
+
+.red {
+  color: hsl(358, 79%, 66%);
+  margin-right: 10px;
+}
+
+.red i,
+.blue i {
+  margin-right: 5px;
+}
+
+.left .blue:hover,
+.flex .blue:hover {
+  color: hsl(238, 40%, 52%, 0.5);
+}
+
+.left .red:hover,
+.flex .red:hover {
+  color: hsl(358, 79%, 66%, 0.5);
+}
+.edit-delete{
+  margin: 0;
+  margin-left: auto;
+}
+.edit-delete .blue:active,
+.edit-delete .red:active {
+  transform: translateY(10px);
+}
+
+.flex p:first-of-type .shape {
+  color: white;
+  background-color: hsl(238, 40%, 52%);
+  font-weight: 500;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+@media (max-width:460px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .plus-minus {
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,139 @@
+/* Animations */
+.fade {
+    animation: fadding 0.5s forwards;
+}
+
+@keyframes fadding {
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(50px);
+    }
+}
+
+.appear {
+    animation: appearing 0.5s forwards;
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateX(0px);
+    }
+}
+
+.appear-down {
+    animation: forwards appearDown 0.5s;
+}
+
+@keyframes appearDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0) translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0) translateY(0px);
+    }
+}
+
+.fade-up {
+    animation: forwards fadeUp 0.5s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0) translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 0) translateY(-100px);
+    }
+}
+
+.center {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.error {
+    padding: 0;
+    margin: 0px 0px 7px;
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+}
+
+.over-layer {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.cont2 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 401;
+    width: 350px;
+}
+
+.cont2 p {
+    color: hsl(211, 10%, 45%);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s;
+    width: 50%;
+}
+
+.buttons button:first-child {
+    background-color: hsl(211, 10%, 45%);
+}
+
+.buttons button:last-child {
+    background-color: hsl(358, 79%, 66%);
+}
+
+.buttons button:first-child:hover {
+    background-color: hsl(211, 10%, 45%, 0.5);
+}
+
+.buttons button:last-child:hover {
+    background-color: hsl(358, 79%, 66%, 0.5);
+}
+
+.buttons button:active {
+    transform: scale(0.8);
+}
